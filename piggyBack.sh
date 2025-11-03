@@ -4,9 +4,9 @@ export PATH="/usr/local/bin:/usr/bin:/bin"
 # Unified CMK Piggyback script. Fetches SNMP data from switches to piggyback the switches and APs into CMK
 
 # Enter SNMP V2 community string and switch IPs (seperated by a space)
-COMMUNITY="BkejGc3hslt1" SWITCHES="10.0.0.2 10.0.0.3 10.0.0.4 10.0.0.6"
+COMMUNITY="" SWITCHES=""
 
-# LLDP MIBs
+# AP Discovery LLDP MIBs
 LLDP_REM_SYSNAME_OID="1.0.8802.1.1.2.1.4.1.1.9"
 LLDP_REM_SYSDESC_OID="1.0.8802.1.1.2.1.4.1.1.10"
 LLDP_REM_MANADDR_OID="1.0.8802.1.1.2.1.4.2.1.4"
