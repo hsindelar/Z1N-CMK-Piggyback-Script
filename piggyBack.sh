@@ -87,6 +87,13 @@ ap_piggyback() {
             desc=$(echo "$descList" | sed -n "${idx}p")
             ip=$(echo "$ipList" | sed -n "${idx}p")
 
+            # Skip if description does not mention an AP or WiFi
+	    if ! echo "$desc" | grep -qiE "AP|WiFi"; then
+            	idx=$((idx + 1))
+                continue
+            fi
+
+
             # Strip surrounding double quotes if present
             cleanName=$(echo "$name" | sed 's/^"//; s/"$//')
 
